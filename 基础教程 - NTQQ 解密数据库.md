@@ -81,11 +81,11 @@ PRAGMA cipher = 'aes-256-cbc';
 
 > 参考资料：[找到了Linux QQ NT聊天记录数据库密钥](https://gist.github.com/bczhc/c0f29920d4e9d0cc6d2c49f7f2fb3a78)
 
-对于Linux，从包管理器安装`sqlcipher`包；对于Windows，从[QQBackup/sqlcipher-github-actions](https://github.com/QQBackup/sqlcipher-github-actions/releases/tag/latest)下载SQLCipher可执行文件。
+对于 Linux，从包管理器安装`sqlcipher`包；对于 Windows，从[QQBackup/sqlcipher-github-actions](https://github.com/QQBackup/sqlcipher-github-actions/releases/tag/latest)下载 SQLCipher 可执行文件。
 
-以下命令适用于Linux环境下的Bash等shell，Windows下可使用Git Bash等代替。
+以下命令适用于 Linux 环境下的 Bash 等 shell，Windows 下可使用 Git Bash 等代替，用于解密数据并导入到未加密的 SQLite 3 数据库`nt_msg.decrypt.db`中：`sqlcipher nt_msg.clean.db "pragma key = 'pass'; pragma kdf_iter = 4000; pragma cipher_hmac_algorithm = HMAC_SHA1;" .d | sqlite3 nt_msg.decrypt.db`
 
-`sqlcipher nt_msg.clean.db "pragma key = 'pass'; pragma kdf_iter = 4000; pragma cipher_hmac_algorithm = HMAC_SHA1;" .d | tail +2 | sqlite3 nt_msg.decrypt.db`
+若出现错误，也可尝试本节`参考资料`中给出的命令。
 
 ## 读取数据库内容
 
