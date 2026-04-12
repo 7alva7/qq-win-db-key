@@ -17,7 +17,7 @@
 
 
 1. 前往 [Frida Release 16.7.19](https://github.com/frida/frida/releases/tag/16.7.19) 下载 Frida
-    - 下载 `frida_17.2.17_iphoneos-arm64.deb`（有根越狱则 `frida_17.2.17_iphoneos-arm.deb`）
+    - 下载 `frida_16.7.19_iphoneos-arm64.deb`（有根越狱则 `frida_16.7.19_iphoneos-arm.deb`）
 
 2. 用 Cydia / Sileo / Zebra 安装上一步下载好的安装包
 
